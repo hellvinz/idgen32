@@ -1,0 +1,12 @@
+ext/rlibidgen32/rlibidgen32_wrap.c
+*.swp
+.bundle
+ext/*.o
+ext/*.bundle
+lib/*.bundle
+.ruby-version
+tmp/
+Gemfile.lock
+pkg/
+idgen32-0.1.0.gem
+html/

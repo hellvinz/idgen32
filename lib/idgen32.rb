@@ -5,13 +5,12 @@ class Idgen32
   include Singleton
   
   def initialize #:nodoc:
-    @struct = Rlibidgen32::Idgen32Ctx.new
-    Rlibidgen32.idgen_32_init(@struct)
+    @struct = Rlibidgen32::Idgen32_ctx.new
+    Rlibidgen32.idgen32_init(@struct)
   end
   
   # Generate the unique id
   def generate
-    Rlibidgen32.idgen_32(@struct)
+    Rlibidgen32.idgen32(@struct)
   end
-  
 end

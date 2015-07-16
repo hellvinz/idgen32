@@ -1,4 +1,6 @@
-= Idgen32
+# Idgen32
+
+[![Build Status](https://travis-ci.org/hellvinz/idgen32.png)](https://travis-ci.org/hellvinz/idgen32)
 
 Idgen32 functions provide a facility to generate a stream of 32-bit
 numbers that are strongly unpredictable and have a repetition cycle close
@@ -9,23 +11,23 @@ happen if they are simply assigned at random.
 Note that this function will never return 0 as it often has a special 
 meaning in network protocols.
 
-== DEPENDENCIES
+## DEPENDENCIES
 
-No dependencies. Require a compiler and the standard C library.
+Require a compiler and the standard C library. arc4random on linux is needed (provided via libbsd-dev on ubuntu/debian)
 
 If you want to run the tests you'll need to have the following dependencies installed:
 
-* Echoe (for the Rakefile)
+* minitest
 
-== USAGE
+## USAGE
 
-require 'rubygems'
-
+```
 require 'idgen32'
 
 Idgen32.instance.generate
+```
 
-== LICENSE:
+## LICENSE:
 
 Copyright (c) 2008 Vincent Hellot
 

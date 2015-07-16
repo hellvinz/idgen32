@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby -wKU
+#!/usr/bin/env ruby -wU
 
 HERE = File.dirname(__FILE__)
 $LOAD_PATH << "#{HERE}/../lib/"
@@ -17,7 +17,7 @@ class Bench
   def benchmark    
     Benchmark.bm(30) do |x|
         @m = Idgen32.instance
-        n = 2500
+        n = 1000000
         x.report("idgen32:#{n}:generate") do
           n.times {@m.generate}
         end
